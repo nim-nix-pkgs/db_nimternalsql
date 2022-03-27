@@ -39,6 +39,14 @@
   inputs."db_nimternalsql-v1_2_0".inputs.nixpkgs.follows = "nixpkgs";
   inputs."db_nimternalsql-v1_2_0".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
+  inputs."db_nimternalsql-v1_3_0".dir   = "v1_3_0";
+  inputs."db_nimternalsql-v1_3_0".owner = "nim-nix-pkgs";
+  inputs."db_nimternalsql-v1_3_0".ref   = "master";
+  inputs."db_nimternalsql-v1_3_0".repo  = "db_nimternalsql";
+  inputs."db_nimternalsql-v1_3_0".type  = "github";
+  inputs."db_nimternalsql-v1_3_0".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."db_nimternalsql-v1_3_0".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@inputs:
   let 
     lib  = flakeNimbleLib.lib;
