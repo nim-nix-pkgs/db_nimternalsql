@@ -7,23 +7,23 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-db_nimternalsql-main.flake = false;
-  inputs.src-db_nimternalsql-main.ref   = "refs/heads/main";
-  inputs.src-db_nimternalsql-main.owner = "rehartmann";
-  inputs.src-db_nimternalsql-main.repo  = "nimternalsql";
-  inputs.src-db_nimternalsql-main.dir   = "";
-  inputs.src-db_nimternalsql-main.type  = "github";
+  inputs.src-db_nimternalsql-v1_3_0.flake = false;
+  inputs.src-db_nimternalsql-v1_3_0.ref   = "refs/tags/v1.3.0";
+  inputs.src-db_nimternalsql-v1_3_0.owner = "rehartmann";
+  inputs.src-db_nimternalsql-v1_3_0.repo  = "nimternalsql";
+  inputs.src-db_nimternalsql-v1_3_0.dir   = "";
+  inputs.src-db_nimternalsql-v1_3_0.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-db_nimternalsql-main"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-db_nimternalsql-v1_3_0"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-db_nimternalsql-main";
+    src  = deps."src-db_nimternalsql-v1_3_0";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
