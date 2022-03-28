@@ -11,7 +11,6 @@
   inputs.src-db_nimternalsql-main.ref   = "refs/heads/main";
   inputs.src-db_nimternalsql-main.owner = "rehartmann";
   inputs.src-db_nimternalsql-main.repo  = "nimternalsql";
-  inputs.src-db_nimternalsql-main.dir   = "";
   inputs.src-db_nimternalsql-main.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
