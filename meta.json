@@ -7,7 +7,7 @@
   "license": "MIT",
   "web": "https://github.com/rehartmann/nimternalsql",
   "refs": [
-    "fatal: unable to access 'https://github.com/rehartmann/nimternalsql/': HTTP/2 stream 1 was not closed cleanly before end of the underlying stream",
+    "fatal: unable to access 'https://github.com/rehartmann/nimternalsql/': Failed to connect to github.com port 443 after 129766 ms: Network is unreachable",
     ""
   ],
   "heads": []
